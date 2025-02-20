@@ -3,31 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO & Erişilebilirlik için meta açıklaması -->
     <meta
       name="description"
       content="Yusuf Karaduman'ın portfolyosu. Bilgisayar Mühendisliği mezunu olarak Veri Bilimi, Yapay Zeka, FullStack ve Siber Güvenlik alanlarında çalışmalar."
     />
     <title>Yusuf Karaduman | Portfolyo</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts: Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts Link -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
     />
-    <!-- AOS (Scroll Animasyonu) -->
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Chart.js (Yetenek Grafikleri) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-    <!-- Sticky Header -->
     <header id="header">
       <nav>
-        <div class="logo">Yusuf Karaduman</div>
+        <div class="logo" aria-label="Site Logosu">
+          <span id="site-name">Yusuf Karaduman</span>
+          <div id="weather-info">Hava durumu yükleniyor...</div>
+        </div>
         <ul class="nav-links">
           <li><a href="#home">Ana Sayfa</a></li>
           <li><a href="#about">Yetenekler</a></li>
@@ -35,19 +32,33 @@
           <li><a href="#experience">Eğitim & Stajlar</a></li>
           <li><a href="#contact">İletişim</a></li>
           <li class="theme-toggle-li">
-            <button id="theme-toggle">Dark Mode</button>
+            <button id="theme-toggle" aria-label="Tema Değiştir">
+              Dark Mode
+            </button>
+          </li>
+          <li class="theme-toggle-li">
+            <button id="resume-btn">
+              <a href="20022025YKCV.pdf" download>Özgeçmiş İndir</a>
+            </button>
           </li>
         </ul>
         <div class="header-right">
-          <div class="social-media">
-            <a href="#" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">YouTube</a>
+          <div class="social-media" aria-label="Sosyal Medya">
+            <a href="https://www.linkedin.com/in/kullaniciadi" target="_blank">
+              <img src="images/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/kullaniciadi" target="_blank">
+              <img src="images/github.png" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/kullaniciadi"
+              target="_blank"
+            >
+              <img src="images/youtube.png" alt="YouTube" />
+            </a>
           </div>
-          <!-- Özgeçmiş İndirme Butonu (desktop) -->
-          <a href="resume.pdf" class="resume-btn" download>Özgeçmiş İndir</a>
         </div>
-        <div class="menu-toggle">
+        <div class="menu-toggle" aria-label="Menüyü Aç/Kapa" tabindex="0">
           <span></span>
           <span></span>
           <span></span>
@@ -56,26 +67,42 @@
     </header>
 
     <main>
-      <!-- Ana Sayfa / Hero -->
       <section id="home" class="section hero" data-aos="fade-up">
-        <div class="hero-content">
-          <h1>Yusuf Karaduman</h1>
-          <p>
-            Bilgisayar Mühendisliği Mezunu | Veri Bilimi, Yapay Zeka, FullStack
-            ve Siber Güvenlik
-          </p>
-          <p class="summary">
-            Bilgisayar mühendisliği mezunu olarak, teorik bilgilerimi uygulamalı
-            deneyimle pekiştirmek ve sektördeki gelişmeleri yakından takip etmek
-            amacıyla iş başvurusunda bulunuyorum. Yapay zeka, veri analitiği ve
-            makine öğrenimi gibi alanlara özel bir ilgi duyuyorum. Veri
-            tabanları, ağ güvenliği ve yazılım geliştirme alanlarında kendimi
-            geliştirmek istiyorum.
-          </p>
+        <div class="home-container">
+          <!-- Sol Bölüm: Sertifika Slider -->
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <img src="images/certificate1.jpg" alt="Sertifika 1" />
+              </div>
+              <div class="slide">
+                <img src="images/certificate2.jpg" alt="Sertifika 2" />
+              </div>
+              <div class="slide">
+                <img src="images/certificate3.jpg" alt="Sertifika 3" />
+              </div>
+              <!-- İhtiyaca göre daha fazla slide ekleyebilirsiniz -->
+            </div>
+          </div>
+          <!-- Sağ Bölüm: Yazı Alanı -->
+          <div class="hero-content">
+            <h1>Yusuf Karaduman</h1>
+            <p class="tagline">
+              Bilgisayar Mühendisliği Mezunu | Veri Bilimi, Yapay Zeka,
+              FullStack ve Siber Güvenlik
+            </p>
+            <p class="summary">
+              Bilgisayar mühendisliği mezunu olarak, teorik bilgilerimi
+              uygulamalı deneyimle pekiştirmek ve sektördeki gelişmeleri
+              yakından takip etmek amacıyla iş başvurusunda bulunuyorum. Yapay
+              zeka, veri analitiği ve makine öğrenimi gibi alanlara özel bir
+              ilgi duyuyorum. Veri tabanları, ağ güvenliği ve yazılım geliştirme
+              alanlarında kendimi geliştirmek istiyorum.
+            </p>
+          </div>
         </div>
       </section>
 
-      <!-- About / Yetenekler -->
       <section id="about" class="section about" data-aos="fade-up">
         <h2>Yetenekler</h2>
         <div class="skills">
@@ -112,57 +139,53 @@
             </ul>
           </div>
         </div>
-
-        <!-- Yetenek Seviyesi: Radar Grafik -->
-        <div class="skills-chart">
-          <canvas id="skillsChart"></canvas>
-        </div>
-
-        <!-- İlerleme Barları ile Yetenek Seviyesi -->
-        <div class="skill-progress" data-aos="fade-up">
-          <div class="progress-item">
-            <span class="skill-name">Python</span>
-            <div class="progress-bar">
-              <div class="progress-fill" data-percentage="90"></div>
-            </div>
+        <div class="skills-content" data-aos="fade-up">
+          <div class="skills-chart">
+            <canvas id="skillsChart"></canvas>
           </div>
-          <div class="progress-item">
-            <span class="skill-name">JavaScript</span>
-            <div class="progress-bar">
-              <div class="progress-fill" data-percentage="80"></div>
+          <div class="skill-progress">
+            <div class="progress-item">
+              <span class="skill-name">Python</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percentage="90"></div>
+              </div>
             </div>
-          </div>
-          <div class="progress-item">
-            <span class="skill-name">HTML/CSS</span>
-            <div class="progress-bar">
-              <div class="progress-fill" data-percentage="85"></div>
+            <div class="progress-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percentage="80"></div>
+              </div>
             </div>
-          </div>
-          <div class="progress-item">
-            <span class="skill-name">React</span>
-            <div class="progress-bar">
-              <div class="progress-fill" data-percentage="75"></div>
+            <div class="progress-item">
+              <span class="skill-name">HTML/CSS</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percentage="85"></div>
+              </div>
             </div>
-          </div>
-          <div class="progress-item">
-            <span class="skill-name">Node JS</span>
-            <div class="progress-bar">
-              <div class="progress-fill" data-percentage="70"></div>
+            <div class="progress-item">
+              <span class="skill-name">React</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percentage="75"></div>
+              </div>
             </div>
-          </div>
-          <div class="progress-item">
-            <span class="skill-name">C++</span>
-            <div class="progress-bar">
-              <div class="progress-fill" data-percentage="65"></div>
+            <div class="progress-item">
+              <span class="skill-name">Node JS</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percentage="70"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <span class="skill-name">C++</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percentage="65"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Projeler -->
       <section id="projects" class="section projects" data-aos="fade-up">
         <h2>Projeler</h2>
-        <!-- Proje Filtreleme Düğmeleri -->
         <div class="project-filters" data-aos="fade-up">
           <button class="filter-btn active" data-filter="all">Hepsi</button>
           <button class="filter-btn" data-filter="web">Web Geliştirme</button>
@@ -170,11 +193,10 @@
           <button class="filter-btn" data-filter="cyber">Siber Güvenlik</button>
         </div>
         <div class="projects-container">
-          <!-- Örnek Proje Kartları (kategori sınıfları eklendi) -->
-          <div class="project-card web" data-aos="fade-up">
+          <div class="project-card web" data-aos="fade-up" tabindex="0">
             <h3>
               Sağlık ve Spor Web Uygulaması
-              <span class="project-icon">🔍</span>
+              <span class="project-icon" aria-hidden="true">🔍</span>
             </h3>
             <p><strong>Teknolojiler:</strong> HTML, CSS, JavaScript</p>
             <div class="project-details">
@@ -183,10 +205,10 @@
               sunmasıdır.
             </div>
           </div>
-          <div class="project-card web" data-aos="fade-up">
+          <div class="project-card web" data-aos="fade-up" tabindex="0">
             <h3>
               Taxi Service Mobil Uygulaması
-              <span class="project-icon">🔍</span>
+              <span class="project-icon" aria-hidden="true">🔍</span>
             </h3>
             <p><strong>Teknolojiler:</strong> Flutter, Figma, PostgreSQL</p>
             <div class="project-details">
@@ -194,10 +216,10 @@
               olup veri tabanı için PostgreSQL kullanılmıştır.
             </div>
           </div>
-          <div class="project-card data" data-aos="fade-up">
+          <div class="project-card data" data-aos="fade-up" tabindex="0">
             <h3>
               TV Dizileri Başarı Tahmin Projesi
-              <span class="project-icon">🔍</span>
+              <span class="project-icon" aria-hidden="true">🔍</span>
             </h3>
             <p>
               <strong>Teknolojiler:</strong> Python, Makine Öğrenmesi (Decision
@@ -208,10 +230,10 @@
               hazırlığı, özellik seçimi ve model değerlendirmesi yapılmıştır.
             </div>
           </div>
-          <div class="project-card cyber" data-aos="fade-up">
+          <div class="project-card cyber" data-aos="fade-up" tabindex="0">
             <h3>
               dunnoSec - R3CONWHAL3
-              <span class="project-icon">🔍</span>
+              <span class="project-icon" aria-hidden="true">🔍</span>
             </h3>
             <p>
               <strong>Teknolojiler:</strong> Go, Bash, Docker, Gowitness, FFUF,
@@ -222,10 +244,10 @@
               bilgi toplama teknikleri içerir.
             </div>
           </div>
-          <div class="project-card data" data-aos="fade-up">
+          <div class="project-card data" data-aos="fade-up" tabindex="0">
             <h3>
               İşaret Dili Tanımlama Sistemi Projesi
-              <span class="project-icon">🔍</span>
+              <span class="project-icon" aria-hidden="true">🔍</span>
             </h3>
             <p>
               <strong>Teknolojiler:</strong> Python, YOLOv8, OpenCV, TensorFlow
@@ -238,45 +260,25 @@
         </div>
       </section>
 
-      <!-- Animasyonlu İstatistikler 
-      <section id="stats" class="section stats" data-aos="fade-up">
-        <h2>İstatistikler</h2>
-        <div class="stats-container">
-          <div class="stat-item">
-            <span class="stat-number" data-target="5">0</span>
-            <p>Proje</p>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="5">0</span>
-            <p>Yıl Deneyim</p>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="1000">0</span>
-            <p>Kullanıcı</p>
-          </div>
-        </div>
-      </section>-->
-
-      <!-- Eğitim & Stajlar -->
       <section id="experience" class="section experience" data-aos="fade-up">
         <h2>Eğitim & Stajlar</h2>
         <div class="experience-container">
-          <div class="experience-card">
+          <div class="experience-card" tabindex="0">
             <h3>Hakkı Demir Anadolu İmam Hatip Lisesi</h3>
             <p>2016 - 2020</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" tabindex="0">
             <h3>İstanbul Sabahattin Zaim Üniversitesi</h3>
             <p>Bilgisayar Mühendisliği | 2020 - 2025</p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" tabindex="0">
             <h3>Asey Games – Web Developer</h3>
             <p>2023 Ağustos/Eylül – 1.5 ay</p>
             <p>
               HTML, CSS, JavaScript ve React JS ile frontend geliştirme stajı.
             </p>
           </div>
-          <div class="experience-card">
+          <div class="experience-card" tabindex="0">
             <h3>Üsküdar Belediyesi – Atölye</h3>
             <p>2024 Mart/Haziran – 3 ay</p>
             <p>
@@ -287,18 +289,17 @@
         </div>
       </section>
 
-      <!-- İletişim -->
       <section id="contact" class="section contact" data-aos="fade-up">
         <h2>İletişim</h2>
         <div class="contact-info">
-          <p><strong>Mobil:</strong> +90 553 742 36 25</p>
+          <p><strong>Mobil:</strong> +90 55* *** ** *5</p>
           <p>
             <strong>E-posta:</strong>
             <a href="mailto:yusuf25bjk@gmail.com">yusuf25bjk@gmail.com</a>
           </p>
           <p><strong>Adres:</strong> İstanbul, Türkiye</p>
         </div>
-        <form id="contact-form" novalidate>
+        <form id="contact-form" novalidate aria-label="İletişim Formu">
           <div class="form-group">
             <label for="name">İsim</label>
             <input
@@ -308,7 +309,11 @@
               placeholder="İsminizi girin"
               required
             />
-            <span class="error-message" id="error-name"></span>
+            <span
+              class="error-message"
+              id="error-name"
+              aria-live="polite"
+            ></span>
           </div>
           <div class="form-group">
             <label for="email">E-posta</label>
@@ -319,7 +324,11 @@
               placeholder="E-posta adresinizi girin"
               required
             />
-            <span class="error-message" id="error-email"></span>
+            <span
+              class="error-message"
+              id="error-email"
+              aria-live="polite"
+            ></span>
           </div>
           <div class="form-group">
             <label for="message">Mesaj</label>
@@ -329,17 +338,26 @@
               placeholder="Mesajınızı girin"
               required
             ></textarea>
-            <span class="error-message" id="error-message"></span>
+            <span
+              class="error-message"
+              id="error-message"
+              aria-live="polite"
+            ></span>
           </div>
           <button type="submit">Gönder</button>
         </form>
       </section>
     </main>
 
-    <!-- Modal Penceresi -->
-    <div id="modal" class="modal">
+    <div
+      id="modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-heading"
+    >
       <div class="modal-content">
-        <span class="close-button">&times;</span>
+        <button class="close-button" aria-label="Kapat">&times;</button>
         <div id="modal-text"></div>
       </div>
     </div>
