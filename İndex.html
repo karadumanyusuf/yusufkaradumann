@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO & Erişilebilirlik için meta açıklaması -->
+    <meta
+      name="description"
+      content="Yusuf Karaduman'ın portfolyosu. Bilgisayar Mühendisliği mezunu olarak Veri Bilimi, Yapay Zeka, FullStack ve Siber Güvenlik alanlarında çalışmalar."
+    />
+    <title>Yusuf Karaduman | Portfolyo</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS (Scroll Animasyonu) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Chart.js (Yetenek Grafikleri) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Sticky Header -->
+    <header id="header">
+      <nav>
+        <div class="logo">Yusuf Karaduman</div>
+        <ul class="nav-links">
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#about">Yetenekler</a></li>
+          <li><a href="#projects">Projeler</a></li>
+          <li><a href="#experience">Eğitim & Stajlar</a></li>
+          <li><a href="#contact">İletişim</a></li>
+          <li class="theme-toggle-li">
+            <button id="theme-toggle">Dark Mode</button>
+          </li>
+        </ul>
+        <div class="header-right">
+          <div class="social-media">
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">YouTube</a>
+          </div>
+          <!-- Özgeçmiş İndirme Butonu (desktop) -->
+          <a href="resume.pdf" class="resume-btn" download>Özgeçmiş İndir</a>
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Ana Sayfa / Hero -->
+      <section id="home" class="section hero" data-aos="fade-up">
+        <div class="hero-content">
+          <h1>Yusuf Karaduman</h1>
+          <p>
+            Bilgisayar Mühendisliği Mezunu | Veri Bilimi, Yapay Zeka, FullStack
+            ve Siber Güvenlik
+          </p>
+          <p class="summary">
+            Bilgisayar mühendisliği mezunu olarak, teorik bilgilerimi uygulamalı
+            deneyimle pekiştirmek ve sektördeki gelişmeleri yakından takip etmek
+            amacıyla iş başvurusunda bulunuyorum. Yapay zeka, veri analitiği ve
+            makine öğrenimi gibi alanlara özel bir ilgi duyuyorum. Veri
+            tabanları, ağ güvenliği ve yazılım geliştirme alanlarında kendimi
+            geliştirmek istiyorum.
+          </p>
+        </div>
+      </section>
+
+      <!-- About / Yetenekler -->
+      <section id="about" class="section about" data-aos="fade-up">
+        <h2>Yetenekler</h2>
+        <div class="skills">
+          <div class="skill-category">
+            <h4>Veri Bilimi ve Yapay Zeka</h4>
+            <ul>
+              <li>Python (NumPy, Pandas, TensorFlow, Scikit-learn, YoloV8)</li>
+              <li>Matlab</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>FullStack</h4>
+            <ul>
+              <li>HTML, CSS, JavaScript, TypeScript</li>
+              <li>Node JS, Java, PHP, React JS, Next JS</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Siber Güvenlik ve Ağlar</h4>
+            <ul>
+              <li>Kali, Python, Bash, C/C++, Go</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Veri Tabanları</h4>
+            <ul>
+              <li>PostgreSQL, MySQL, SQL, SQLite, MongoDB</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Diğer</h4>
+            <ul>
+              <li>Microsoft Office, Adobe, Vegas Pro, Camtasia, Capcut</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Yetenek Seviyesi: Radar Grafik -->
+        <div class="skills-chart">
+          <canvas id="skillsChart"></canvas>
+        </div>
+
+        <!-- İlerleme Barları ile Yetenek Seviyesi -->
+        <div class="skill-progress" data-aos="fade-up">
+          <div class="progress-item">
+            <span class="skill-name">Python</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percentage="90"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="skill-name">JavaScript</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percentage="80"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="skill-name">HTML/CSS</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percentage="85"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="skill-name">React</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percentage="75"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="skill-name">Node JS</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percentage="70"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <span class="skill-name">C++</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percentage="65"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projeler -->
+      <section id="projects" class="section projects" data-aos="fade-up">
+        <h2>Projeler</h2>
+        <!-- Proje Filtreleme Düğmeleri -->
+        <div class="project-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">Hepsi</button>
+          <button class="filter-btn" data-filter="web">Web Geliştirme</button>
+          <button class="filter-btn" data-filter="data">Veri Bilimi</button>
+          <button class="filter-btn" data-filter="cyber">Siber Güvenlik</button>
+        </div>
+        <div class="projects-container">
+          <!-- Örnek Proje Kartları (kategori sınıfları eklendi) -->
+          <div class="project-card web" data-aos="fade-up">
+            <h3>
+              Sağlık ve Spor Web Uygulaması
+              <span class="project-icon">🔍</span>
+            </h3>
+            <p><strong>Teknolojiler:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-details">
+              Bu web sitesinin amacı; kullanıcının vücut kitle endeksine göre
+              kalori hesabı yapması ve kişiye özel antrenman programı
+              sunmasıdır.
+            </div>
+          </div>
+          <div class="project-card web" data-aos="fade-up">
+            <h3>
+              Taxi Service Mobil Uygulaması
+              <span class="project-icon">🔍</span>
+            </h3>
+            <p><strong>Teknolojiler:</strong> Flutter, Figma, PostgreSQL</p>
+            <div class="project-details">
+              Figma ile tasarlanan mobil uygulama, Flutter ile hayata geçirilmiş
+              olup veri tabanı için PostgreSQL kullanılmıştır.
+            </div>
+          </div>
+          <div class="project-card data" data-aos="fade-up">
+            <h3>
+              TV Dizileri Başarı Tahmin Projesi
+              <span class="project-icon">🔍</span>
+            </h3>
+            <p>
+              <strong>Teknolojiler:</strong> Python, Makine Öğrenmesi (Decision
+              Trees, Random Forests, SVM)
+            </p>
+            <div class="project-details">
+              Televizyon dizilerinin başarı oranını tahmin etmek için veri
+              hazırlığı, özellik seçimi ve model değerlendirmesi yapılmıştır.
+            </div>
+          </div>
+          <div class="project-card cyber" data-aos="fade-up">
+            <h3>
+              dunnoSec - R3CONWHAL3
+              <span class="project-icon">🔍</span>
+            </h3>
+            <p>
+              <strong>Teknolojiler:</strong> Go, Bash, Docker, Gowitness, FFUF,
+              HTTPX, Subzy
+            </p>
+            <div class="project-details">
+              Otomatik bilgi keşfi için geliştirilmiş framework, pasif ve aktif
+              bilgi toplama teknikleri içerir.
+            </div>
+          </div>
+          <div class="project-card data" data-aos="fade-up">
+            <h3>
+              İşaret Dili Tanımlama Sistemi Projesi
+              <span class="project-icon">🔍</span>
+            </h3>
+            <p>
+              <strong>Teknolojiler:</strong> Python, YOLOv8, OpenCV, TensorFlow
+            </p>
+            <div class="project-details">
+              Gerçek zamanlı el hareketlerini algılayarak işaret dilindeki
+              sembolleri sınıflandıran sistem.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Animasyonlu İstatistikler 
+      <section id="stats" class="section stats" data-aos="fade-up">
+        <h2>İstatistikler</h2>
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <p>Proje</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <p>Yıl Deneyim</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="1000">0</span>
+            <p>Kullanıcı</p>
+          </div>
+        </div>
+      </section>-->
+
+      <!-- Eğitim & Stajlar -->
+      <section id="experience" class="section experience" data-aos="fade-up">
+        <h2>Eğitim & Stajlar</h2>
+        <div class="experience-container">
+          <div class="experience-card">
+            <h3>Hakkı Demir Anadolu İmam Hatip Lisesi</h3>
+            <p>2016 - 2020</p>
+          </div>
+          <div class="experience-card">
+            <h3>İstanbul Sabahattin Zaim Üniversitesi</h3>
+            <p>Bilgisayar Mühendisliği | 2020 - 2025</p>
+          </div>
+          <div class="experience-card">
+            <h3>Asey Games – Web Developer</h3>
+            <p>2023 Ağustos/Eylül – 1.5 ay</p>
+            <p>
+              HTML, CSS, JavaScript ve React JS ile frontend geliştirme stajı.
+            </p>
+          </div>
+          <div class="experience-card">
+            <h3>Üsküdar Belediyesi – Atölye</h3>
+            <p>2024 Mart/Haziran – 3 ay</p>
+            <p>
+              JavaScript ve ilgili framework'ler üzerinde yoğunlaşarak
+              geliştirme yapıldı.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- İletişim -->
+      <section id="contact" class="section contact" data-aos="fade-up">
+        <h2>İletişim</h2>
+        <div class="contact-info">
+          <p><strong>Mobil:</strong> +90 553 742 36 25</p>
+          <p>
+            <strong>E-posta:</strong>
+            <a href="mailto:yusuf25bjk@gmail.com">yusuf25bjk@gmail.com</a>
+          </p>
+          <p><strong>Adres:</strong> İstanbul, Türkiye</p>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">İsim</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="İsminizi girin"
+              required
+            />
+            <span class="error-message" id="error-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-posta adresinizi girin"
+              required
+            />
+            <span class="error-message" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Mesaj</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Mesajınızı girin"
+              required
+            ></textarea>
+            <span class="error-message" id="error-message"></span>
+          </div>
+          <button type="submit">Gönder</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Modal Penceresi -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-text"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Yusuf Karaduman. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
