@@ -8,10 +8,15 @@
       content="Yusuf Karaduman'ın portfolyosu. Bilgisayar Mühendisliği mezunu olarak Veri Bilimi, Yapay Zeka, FullStack ve Siber Güvenlik alanlarında çalışmalar."
     />
     <title>Yusuf Karaduman | Portfolyo</title>
-    <!-- Google Fonts Link -->
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <!-- Font Awesome ile daha belirgin hava durumu ikonları -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -23,20 +28,41 @@
       <nav>
         <div class="logo" aria-label="Site Logosu">
           <span id="site-name">Yusuf Karaduman</span>
-          <div id="weather-info">Hava durumu yükleniyor...</div>
+          <!-- Hava durumu dropdown'ı -->
+          <div class="weather-container">
+            <div
+              id="weather-info"
+              class="weather-display"
+              tabindex="0"
+              aria-label="Hava durumu, açmak için tıklayın"
+            >
+              Hava durumu yükleniyor... <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="weather-dropdown">
+              <input
+                type="text"
+                id="city-input"
+                placeholder="Şehir girin"
+                aria-label="Şehir"
+              />
+              <button id="update-weather" aria-label="Güncelle Hava Durumu">
+                Güncelle
+              </button>
+            </div>
+          </div>
         </div>
         <ul class="nav-links">
-          <li><a href="#home">Ana Sayfa</a></li>
-          <li><a href="#about">Yetenekler</a></li>
-          <li><a href="#projects">Projeler</a></li>
-          <li><a href="#experience">Eğitim & Stajlar</a></li>
-          <li><a href="#contact">İletişim</a></li>
-          <li class="theme-toggle-li">
+          <li class="nav-section"><a href="#home">Ana Sayfa</a></li>
+          <li class="nav-section"><a href="#about">Yetenekler</a></li>
+          <li class="nav-section"><a href="#projects">Projeler</a></li>
+          <li class="nav-section">
+            <a href="#experience">Eğitim & Stajlar</a>
+          </li>
+          <li class="nav-section"><a href="#contact">İletişim</a></li>
+          <li class="nav-buttons">
             <button id="theme-toggle" aria-label="Tema Değiştir">
               Dark Mode
             </button>
-          </li>
-          <li class="theme-toggle-li">
             <button id="resume-btn">
               <a href="20022025YKCV.pdf" download>Özgeçmiş İndir</a>
             </button>
@@ -69,22 +95,28 @@
     <main>
       <section id="home" class="section hero" data-aos="fade-up">
         <div class="home-container">
-          <!-- Sol Bölüm: Sertifika Slider -->
           <div class="slider-container">
+            <button id="prevSlide" class="slider-btn">‹</button>
             <div class="slider">
               <div class="slide">
-                <img src="images/certificate1.jpg" alt="Sertifika 1" />
+                <img src="images/cert1.jpg" alt="Sertifika 1" />
               </div>
               <div class="slide">
-                <img src="images/certificate2.jpg" alt="Sertifika 2" />
+                <img
+                  src="images/SIEM_Temelleri_Sertifika.png"
+                  alt="Sertifika 2"
+                />
               </div>
               <div class="slide">
-                <img src="images/certificate3.jpg" alt="Sertifika 3" />
+                <img
+                  src="images/Güvenlik_Duvarına_Giriş_Sertifika.png"
+                  alt="Sertifika 3"
+                />
               </div>
-              <!-- İhtiyaca göre daha fazla slide ekleyebilirsiniz -->
             </div>
+            <button id="nextSlide" class="slider-btn">›</button>
           </div>
-          <!-- Sağ Bölüm: Yazı Alanı -->
+
           <div class="hero-content">
             <h1>Yusuf Karaduman</h1>
             <p class="tagline">
